@@ -13,7 +13,7 @@ def main() -> None:
         )
         return
 
-    scores = []
+    scores: list[int] = []
 
     for i in range(1,len(sys.argv)):
         try:
@@ -29,12 +29,11 @@ def main() -> None:
             "python3 ft_score_analytics.py <score1> <score2> ..."
         )
         return
-
-    total = sum(scores)
-    average = total / len(scores)
-    high_score = max(scores)
-    low_score = min(scores)
-    score_range = high_score - low_score
+    total: int = sum(scores)
+    average: float = total / len(scores)
+    high_score: int = max(scores)
+    low_score: int = min(scores)
+    score_range: int = high_score - low_score
 
     print(f"Scores processed: {scores}")
     print(f"Total players: {len(scores)}")
